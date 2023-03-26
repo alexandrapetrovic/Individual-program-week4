@@ -1,158 +1,264 @@
 * {
-    box-sizing: border-box;
-  }
-  
-  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-  pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var, b, u, i, center,
-  dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
-  thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
-  header, hgroup, menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
-   margin: 0;
-   padding: 0;
-  }
-  
-  /* HTML5 display-role reset for older browsers */
-  article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
-  }
-  
-  ol, ul {
-    list-style: none;
-  }
-  blockquote, q {
-    quotes: none;
-  }
-  
-  blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
-  }
-  
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
+  box-sizing: border-box;
+}
 
-  :root {
-    background-color: #0A2239;
-    --fw-bold: 700;
-    --fs-italic: italic;
-    --color-white: #FFFFFF;
-    --color-brown: #D3924A;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+}
 
-  }
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
 
-  body {
-    font-family: 'Inter', sans-serif;
-  }
+ol,
+ul {
+  list-style: none;
+}
 
-  main {
-    padding: 2rem;
-  }
+blockquote,
+q {
+  quotes: none;
+}
 
-  /*
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  background-color: #0A2239;
+  --fw-bold: 700;
+  --fs-italic: italic;
+  --color-white: #FFFFFF;
+  --color-brown: #D3924A;
+
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  padding: 2rem;
+}
+
+/*
   h1-24px
   */
 
+/* UMESTO MARGINE ISKORISTI GAP ZA RAZMAK
   .my {
     margin-top: 18px;
     margin-bottom: 18px;
-  }
+  }*/
 
-  h1, .h1 {
-    font-size: 1.5rem;
-    font-weight: var(--fw-bold);
-  }
+h1,
+.h1 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+}
 
-  .text-white {
-    color: var(--color-white);
-  }
+.text-white {
+  color: var(--color-white);
+}
 
-  .text-brown {
-    color: var(--color-brown);
-  }
+.text-brown {
+  color: var(--color-brown);
+}
 
-  .text-italic {
-    font-style: italic;
-  }
+.text-italic {
+  font-style: italic;
+}
 
-  .flex {
-    display: flex;
-  }
+.flex {
+  display: flex;
+}
 
-  form {
-    max-width: 640px;
-    padding: 24px;
-    display: grid;
-    justify-content: start;
-  }
+form {
+  max-width: 640px;
+  padding: 24px;
+  display: grid;
+  justify-content: start;
+  gap: 10px;
+}
 
-  /*.grid-container {
+/*.grid-container {
     display: grid;
     justify-content: start;
   }*/
 
-  form label {
-    color: #D3924A;
-    ;
-  }
+form label {
+  color: #D3924A;
+  ;
+}
 
-  form input {
-    width: 284px;
-    height: 50px;
+form input {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 12px;
+  background-color: #FFFFFF;
+  border: 2px solid #CE791B;
+  border-radius: 6px;
+}
+
+input:focus {
+  background-color: #3c3f42;
+}
+
+/*textarea:nth-child(13) {
+    width: 284px; -Ne zakucavati širinu, staviti u %
+    height: 150px; -Umesto visine staviti padding
+    border: 2px solid #CE791B;
+    border-radius: 6px;
+    margin-bottom: 12px;
+
+  }*/
+
+[placeholder~="message"] {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #CE791B;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+input[type="file"] {
+  background-color: #0A2239;
+  border: none;
+  color: #A69C9C;
+}
+
+[class="apply"] {
+  background-color: #CE791B;
+  color: #FFFFFF;
+  padding: 12px 32px;
+  width: 50%;
+  height: 43px;
+  border: none;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+}
+
+[class=apply]:hover {
+  background-color: #5a3d1b;
+}
+
+/*MOŽE I OVAKO:
+
+  input[type="text"], 
+  input[type="number"], 
+  input[type="email"], 
+  [placeholder~="message"] {
+    width: 100%;
+    padding:1rem;
     margin-bottom: 12px;
     background-color: #FFFFFF;
     border: 2px solid #CE791B;
     border-radius: 6px;
-  }
-
-  input:focus {
-    background-color: #3c3f42;
-  }
-
-  /*textarea:nth-child(13) {
-    width: 284px;
-    height: 150px;
-    border: 2px solid #CE791B;
-    border-radius: 6px;
-    margin-bottom: 12px;
-
   }*/
-
-  [placeholder~="message"] {
-    width: 284px;
-    height: 150px;
-    border: 2px solid #CE791B;
-    border-radius: 6px;
-    margin-bottom: 12px;
-  }
-
-  input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
-    margin-right: 10px;
-  }
-
-  input[type="file"] {
-    background-color: #0A2239;
-    border: none;
-    color: #A69C9C;
-  }
-
-  [class="apply"] {
-    background-color: #CE791B;
-    color: #FFFFFF;
-    padding: 12px 32px;
-    width: 110px;
-    height: 43px;
-    border: none;
-    font-weight: var(--fw-bold);
-    cursor: pointer;
-  }
-
-  [class=apply]:hover {
-    background-color: #5a3d1b;
-  }
-
